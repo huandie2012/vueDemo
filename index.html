@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no"><!--在iPhone 手机上默认手机号码不被显示为拨号链接-->
+    <meta name="full-screen" content="yes"><!-- UC强制全屏 -->
+    <meta name="x5-fullscreen" content="true"> <!--QQ强制全屏-->
+    <title>快乐星期五</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      html,body{
+        width: 100%;
+        height: 100%;
+      }
+      body{
+        background: url("http://cangdu.org/happyfri/static/img/1-1.jpg") no-repeat;
+        background-size: 100% 100%;
+      }
+    </style>
+    <script>
+      var L_WIDTH, L_HEIGHT;
+      (function(){
+        var w = document.documentElement.clientWidth,
+          h = document.documentElement.clientHeight,
+          p = 1206/750;
+        if(w*p > h){
+          w = h/p;
+        }else if(w*p < h){
+          h = w*p;
+        }
+        L_WIDTH = w;
+        L_HEIGHT = h;
+      })();
+      document.documentElement.style.fontSize = (L_WIDTH / 10)+ 'px';
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
